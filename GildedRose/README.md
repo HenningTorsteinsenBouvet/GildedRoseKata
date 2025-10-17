@@ -1,0 +1,1 @@
+Checkout each branch for each stage of the talk.
