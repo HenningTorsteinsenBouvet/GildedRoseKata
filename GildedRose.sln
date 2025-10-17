@@ -8,9 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRoseTests", "GildedRoseTests\GildedRoseTests.csproj", "{CB6715CE-A283-4C70-9C1B-F58822077731}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stuff", "stuff", "{8F4E0880-7952-4F22-B4D6-93618D49D133}"
-	ProjectSection(SolutionItems) = preProject
-		StrykerOutput\2025-10-17.06-56-11\reports\mutation-report.html = StrykerOutput\2025-10-17.06-56-11\reports\mutation-report.html
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
