@@ -10,6 +10,11 @@ namespace GildedRoseKata
             this.Items = Items;
         }
 
+        private void DeadCode()
+        {
+            var unusedVariable = 42;
+        }
+
         public void UpdateQuality()
         {
             for (var i = 0; i < Items.Count; i++)
