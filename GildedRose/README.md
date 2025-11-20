@@ -1,5 +1,19 @@
 1. Introduction
 2. Tools
+
+# Tools
+
+These are the tools I'm going to use in this talk:
+- Visual Studio
+- dotnet
+- XUnit
+- dotnet-mutator (Stryker.NET)
+
+This talk will use c# code examples, but the principles apply to (almost) any language.
+
+
+
+
 3. When to refactor
 4. What is Gilded Rose?
 5. Add characterization tests
