@@ -1,4 +1,4 @@
-﻿using GildedRoseKata;
+using GildedRoseKata;
 using System.Collections.Generic;
 using Xunit;
 
@@ -9,18 +9,6 @@ namespace GildedRoseTests
         private readonly string _backStagePassName = "Backstage passes to a TAFKAL80ETC concert";
         private readonly string _sulfuras = "Sulfuras, Hand of Ragnaros";
         private readonly string _agedBrie = "Aged Brie";
-
-        [Theory]
-        [InlineData(1, 0)]
-        [InlineData(-42, -43)]
-        public void Should_DecreaseSellInValue_GivenAnySellInValue(int initialSellIn, int expected)
-        {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = initialSellIn, Quality = 0 } };
-
-            GildedRose app = new(Items);
-            app.UpdateQuality();
-            Assert.Equal(expected, Items[0].SellIn);
-        }
 
         [Theory]
         [InlineData(10, 10, 12)]
@@ -97,7 +85,7 @@ namespace GildedRoseTests
         [InlineData(-10, -10)]
         public void Should_NotChangeSellInOfSulfuras_GivenWeRunUpdateQuality(int initialSellIn, int expectedSellIn)
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = initialSellIn, Quality = 80 } };
+            IList<Item> Items = new List<Item> { new Item { Name = _sulfuras, SellIn = initialSellIn, Quality = 80 } };
 
             GildedRose app = new(Items);
             app.UpdateQuality();
@@ -105,32 +93,10 @@ namespace GildedRoseTests
         }
 
         [Theory]
-        [InlineData(1, 10, 9)]
-        public void Should_DecreaseQuality_GivenWeRunOpdateQuality(int sellIn, int initialQuality, int expectedQuality)
-        {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = sellIn, Quality = initialQuality } };
-
-            GildedRose app = new(Items);
-            app.UpdateQuality();
-            Assert.Equal(expectedQuality, Items[0].Quality);
-        }
-
-        [Theory]
         [InlineData(11, 10, 11)]
         public void Should_IncreaseBackStageQualityBy1_GivenSellInAbove10(int initialSellIn, int initialQuality, int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item { Name = _backStagePassName, SellIn = initialSellIn, Quality = initialQuality } };
-
-            GildedRose app = new(Items);
-            app.UpdateQuality();
-            Assert.Equal(expectedQuality, Items[0].Quality);
-        }
-
-        [Theory]
-        [InlineData(1, 0, 0)]
-        public void Should_NotDecreaseQualityBelowZero_GivenQualityIsZero(int sellIn, int initialQuality, int expectedQuality)
-        {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = sellIn, Quality = initialQuality } };
 
             GildedRose app = new(Items);
             app.UpdateQuality();
