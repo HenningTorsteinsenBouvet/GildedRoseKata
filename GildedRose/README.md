@@ -18,8 +18,10 @@ Mutation testing is a technique used to evaluate the quality of your test suite.
 
 Run it in the directory of the sln file:
 
-`dotnet stryker`
+`dotnet stryker -o`
+(use test-case-filter parameter on larger code bases!)
 
+Review the report generated in the StrykerOutput folder.
 
 7. Kill the mutants!
 8. Finally Some Refactoring
