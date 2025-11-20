@@ -4,27 +4,48 @@
 4. What is Gilded Rose?
 5. Add characterization tests
 6. Check for mutants
-
 7. Kill the mutants!
 
-Review the mutation testing report to see which mutants have survived. Focus on the following survived mutants:
-   - Mutant #36 (Line 37): Change `<` to `<=` in the quality check for Backstage passes when SellIn < 11.
-   - Mutant #45 (Line 45): Change `<` to `<=` in the quality check for Backstage passes when SellIn < 6.
-   - Mutants #63, #64, #65 (Lines 65-66): Change `-` to `+` in the quality degradation logic for normal items after SellIn date has passed.
+8. Finally Some Refactoring!
 
-Or... let the LLM do it for you!
+# Identify code smells
 
-Prompt:
-`Review the Stryker mutation testing report, and create a plan for more tests.`
+We have to identify code smells in the code base. https://refactoring.guru/refactoring/smells
+## Bloaters
+- Long Method
+- Large Class
+- Primitive Obsession
+- Long Parameter List
+- Data Clumps
 
-Documents created:
-- `test-plan.md`: A detailed plan outlining the survived mutants, their locations, root causes, and specific test cases needed to kill them.
-- `MutationKillerTests.cs`: A new test class containing the necessary test methods and cases to kill all survived mutants.
-- `SUMMERY.md`: A summary of the improvements made, including the initial mutation score, survived mutants, and what was created to address them.
+## Object-Orientation Abusers
+- Alternative Classes with Different Interfaces
+- Refused Bequest
+- Switch Statements
+- Temporary Field
+
+## Change Preventers
+- Divergent Change
+- Shotgun Surgery
+- Parallel Inheritance Hierarchies
+
+## Dispensables
+- Comments
+- Duplicate Code
+- Dead Code
+- Speculative Generality
+- Data Class
+- Lazy Class
+
+## Couplers
+- Feature Envy
+- Inappropriate Intimacy
+- Message Chains
+- Incomplete Library Class
+- Middle Man
 
 
-8. Finally Some Refactoring
-9. Identify code smells
+
 10. Refactor
 11. Refactor
 12. Refactor
