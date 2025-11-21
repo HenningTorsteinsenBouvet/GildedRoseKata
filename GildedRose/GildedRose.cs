@@ -18,13 +18,14 @@ namespace GildedRoseKata
 
         // Long method
         // Feature envy
+        // Inappropriate Intimacy
         public void UpdateQuality()
         {
             for (var i = 0; i < Items.Count; i++) // Deep nesting
             {
                 if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert") // Magic string, Complicated logic
                 {
-                    if (Items[i].Quality > 0)
+                    if (Items[i].Quality > 0) // Duplicate code
                     {
                         if (Items[i].Name != "Sulfuras, Hand of Ragnaros") // Magic string, Nested code
                         {
@@ -34,7 +35,7 @@ namespace GildedRoseKata
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
+                    if (Items[i].Quality < 50) // Duplicate code, deeply nested code
                     {
                         Items[i].Quality = Items[i].Quality + 1; // Duplicate code
 
@@ -42,7 +43,7 @@ namespace GildedRoseKata
                         {
                             if (Items[i].SellIn < 11)
                             {
-                                if (Items[i].Quality < 50) // Nested code
+                                if (Items[i].Quality < 50) // Duplicate code
                                 {
                                     Items[i].Quality = Items[i].Quality + 1; // Duplicate code, Nested code
                                 }
@@ -50,7 +51,7 @@ namespace GildedRoseKata
 
                             if (Items[i].SellIn < 6)
                             {
-                                if (Items[i].Quality < 50) // Nested code
+                                if (Items[i].Quality < 50) // Duplicate code
                                 {
                                     Items[i].Quality = Items[i].Quality + 1; // Duplicate code
                                 }
@@ -70,7 +71,7 @@ namespace GildedRoseKata
                     {
                         if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert") // Magic string
                         {
-                            if (Items[i].Quality > 0)
+                            if (Items[i].Quality > 0) // Duplicate code
                             {
                                 if (Items[i].Name != "Sulfuras, Hand of Ragnaros") // Magic string
                                 {
@@ -85,7 +86,7 @@ namespace GildedRoseKata
                     }
                     else
                     {
-                        if (Items[i].Quality < 50)
+                        if (Items[i].Quality < 50) // Duplicate code
                         {
                             Items[i].Quality = Items[i].Quality + 1; // Duplicate code
                         }
