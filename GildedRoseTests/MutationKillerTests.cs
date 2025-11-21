@@ -26,12 +26,7 @@ namespace GildedRoseTests
             // Arrange
             IList<Item> Items = new List<Item> 
             { 
-                new Item 
-                { 
-                    Name = _backStagePassName, 
-                    SellIn = initialSellIn, 
-                    Quality = initialQuality 
-                } 
+                Item.Create(_backStagePassName, initialSellIn, initialQuality)
             };
 
             // Act
@@ -56,12 +51,7 @@ namespace GildedRoseTests
             // Arrange
             IList<Item> Items = new List<Item> 
             { 
-                new Item 
-                { 
-                    Name = _backStagePassName, 
-                    SellIn = initialSellIn, 
-                    Quality = initialQuality 
-                } 
+                Item.Create(_backStagePassName, initialSellIn, initialQuality)
             };
 
             // Act
@@ -88,12 +78,7 @@ namespace GildedRoseTests
             // Arrange
             IList<Item> Items = new List<Item> 
             { 
-                new Item 
-                { 
-                    Name = "Regular Item", 
-                    SellIn = initialSellIn, 
-                    Quality = initialQuality 
-                } 
+                Item.Create("Regular Item", initialSellIn, initialQuality)
             };
 
             // Act
@@ -114,12 +99,7 @@ namespace GildedRoseTests
             // Arrange
             IList<Item> Items = new List<Item> 
             { 
-                new Item 
-                { 
-                    Name = _backStagePassName, 
-                    SellIn = 10, 
-                    Quality = 49 
-                } 
+                Item.Create(_backStagePassName, 10, 49)
             };
 
             GildedRose app = new(Items);

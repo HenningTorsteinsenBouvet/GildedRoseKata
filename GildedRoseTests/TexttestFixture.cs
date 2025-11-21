@@ -1,6 +1,5 @@
-﻿
-using GildedRoseKata;
 
+using GildedRoseKata;
 using System;
 using System.Collections.Generic;
 
@@ -13,31 +12,16 @@ namespace GildedRoseTests
             Console.WriteLine("OMGHAI!");
 
             IList<Item> Items = new List<Item>{
-                new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
-                new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
-                new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
-                new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
-                new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
-                new Item
-                {
-                    Name = "Backstage passes to a TAFKAL80ETC concert",
-                    SellIn = 15,
-                    Quality = 20
-                },
-                new Item
-                {
-                    Name = "Backstage passes to a TAFKAL80ETC concert",
-                    SellIn = 10,
-                    Quality = 49
-                },
-                new Item
-                {
-                    Name = "Backstage passes to a TAFKAL80ETC concert",
-                    SellIn = 5,
-                    Quality = 49
-                },
+                Item.Create("+5 Dexterity Vest", 10, 20),
+                Item.Create("Aged Brie", 2, 0),
+                Item.Create("Elixir of the Mongoose", 5, 7),
+                Item.Create("Sulfuras, Hand of Ragnaros", 0, 80),
+                Item.Create("Sulfuras, Hand of Ragnaros", -1, 80),
+                Item.Create("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                Item.Create("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                Item.Create("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
+                Item.Create("Conjured Mana Cake", 3, 6)
             };
 
             var app = new GildedRose(Items);
@@ -62,3 +46,5 @@ namespace GildedRoseTests
         }
     }
 }
+
+
