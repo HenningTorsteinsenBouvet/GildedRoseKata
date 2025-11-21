@@ -13,7 +13,8 @@
 # Time to refactor!
 
 ## Follow this recepie: 
-Refactor
-Run tests
-Commit
-Repeat
+- Refactor - **Make small incremental changes**
+- Run tests
+- Commit
+- Repeat
+
