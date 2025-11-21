@@ -8,6 +8,9 @@
 
 8. Finally Some Refactoring!
 
+
+... but before we start, we should have some sort plan
+
 # Identify code smells
 
 We have to identify code smells in the code base. https://refactoring.guru/refactoring/smells
